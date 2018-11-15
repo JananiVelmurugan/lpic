@@ -1,0 +1,30 @@
+To transfer the files to your virtual machine do the following:
+
+macOS
+-----
+macOS users can use the scp command:
+
+$ scp lpic-1-(press tab).zip guru@192.168.0.139: 
+
+Replace 192.168.0.139 with the IP of your virtual machine, and ensure the colon is present at the end of the line. 
+
+This will prompt you for the password, and you should type it in and it will copy the file to the home directory. 
+
+Windows
+-------
+I suggest windows users use WinSCP, available at https://winscp.net/eng/download.php
+
+Create a new connection, the host name will just be the IP address of your virtual machine (eg. 192.168.0.139), the username guru and the password guru. 
+
+Once logged in you can simply drag the files.zip to the window and it will copy it to your virtual machine.
+
+Extracting the zip
+------------------
+ssh to your virtual machine or open the VirtualBox console, login as guru and type:
+
+$ unzip lpic-1-(press tab).zip 
+
+if the unzip program is missing, try sudo apt-get install unzip, then run the unzip command. 
+
+The files should now be present in your home directory.
+
